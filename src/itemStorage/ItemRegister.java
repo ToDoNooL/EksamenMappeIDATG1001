@@ -79,7 +79,107 @@ public class ItemRegister
        }
        return foundItems.iterator();
    }
-   public int getNumberOfItems()
+
+    public Iterator<Item> setNewHigherAmountInStorages(String itemNumber, int newAmount)
+    {
+        HashSet<Item> foundItems = new HashSet<>();
+
+
+        for (Item item: this.itemList.values())
+        {
+            if (item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+                item.setNumberOfItemsInStorage(getNumberOfItems() + newAmount);
+                foundItems.add(item);
+            }
+        }
+        return foundItems.iterator();
+    }
+
+    public Iterator<Item> setNewLowerAmountInStorage(String itemNumber, int newAmount)
+    {
+        HashSet<Item> foundItems = new HashSet<>();
+
+
+        for (Item item: this.itemList.values())
+        {
+            if (item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+                item.setNumberOfItemsInStorage(getNumberOfItems() - newAmount);
+                foundItems.add(item);
+            }
+        }
+        return foundItems.iterator();
+    }
+    public Iterator<Item> setNewPriceOnItem(String itemNumber, int newPrice)
+    {
+        HashSet<Item> foundItems = new HashSet<>();
+
+
+        for (Item item: this.itemList.values())
+        {
+            if (item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+                item.setItemPrice(newPrice);
+                foundItems.add(item);
+            }
+        }
+        return foundItems.iterator();
+    }
+
+    public Iterator<Item> setDiscountOnItem(String itemNumber, int discount)
+    {
+        HashSet<Item> foundItem = new HashSet<>();
+
+        for (Item item: this.itemList.values())
+        {
+            if(item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+
+                item.setItemPrice(item.getItemPrice()* (100-discount)/100);
+                foundItem.add(item);
+            }
+        }
+        return foundItem.iterator();
+    }
+
+    public Iterator<Item> setNewDescription(String itemNumber, String newItemDescription)
+    {
+        HashSet<Item> foundItem = new HashSet<>();
+
+        for (Item item: this.itemList.values())
+        {
+            if(item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+                item.setItemDescription(newItemDescription);
+                foundItem.add(item);
+            }
+        }
+        return foundItem.iterator();
+    }
+
+    public Iterator<Item> setNewMethod(String itemNumber, String newItemDescription, int newPrice
+        , int setDiscount)
+    {
+        HashSet<Item> foundItem = new HashSet<>();
+
+        for (Item item: this.itemList.values())
+        {
+            if(item.getItemNumber().equalsIgnoreCase(itemNumber))
+            {
+                item.setItemDescription(newItemDescription);
+                foundItem.add(item);
+                item.setItemPrice(newPrice);
+                foundItem.add(item);
+                item.setItemPrice(item.getItemPrice()* setDiscount);
+                foundItem.add(item);
+            }
+        }
+        return foundItem.iterator();
+    }
+
+
+    public int getNumberOfItems()
     {
         return this.itemList.values().size();
     }

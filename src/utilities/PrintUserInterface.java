@@ -329,10 +329,6 @@ public class PrintUserInterface
     public void printAllItems()
     {
         Iterator<Item> it = this.itemRegister.getIterator();
-        // To format the output so that the output gets a tabular structure,
-        // you can use the printf()-method.
-        // Here is an article showing you examples of use:
-        // https://dzone.com/articles/java-string-format-examples
         System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n",
             "Price NOK", "ItemNumber", "Item Description", "Item Brand" , "Amount Left");
         System.out.println("----------------------------------------------------------------------------------------------------------------");
@@ -344,5 +340,51 @@ public class PrintUserInterface
                 item.getItemBrandName(),item.getNumberOfItemsInStorage());
         }
     }
+
+    public void printHowToDeleteItem()
+    {
+        System.out.println("Enter The ItemNumber Of The Item You Want To Delete: ");
+    }
+    public void printAreYouSure()
+    {
+        System.out.println("Are You Sure You Wanna Delete This Item? ");
+    }
+    public void printItemNotFound()
+    {
+        System.out.println("Item was not found");
+    }
+    public void printItemDeleted()
+    {
+        System.out.println("Item Has Been Deleted");
+    }
+
+    public void printConfirmMenuDelete()
+    {
+        System.out.println("[1] Yes Delete this item.");
+        System.out.println("[0] No Keep Item");
+    }
+    public void printSearchItem(String searchUserInput)
+    {
+        Iterator<Item> it = this.itemRegister.foundItemsByItemNumber(searchUserInput);
+        boolean printHeader = true;
+        boolean itemFound = false;
+        while (it.hasNext()) {
+            Item item = it.next();
+            if (item.getItemNumber().equalsIgnoreCase(searchUserInput)) {
+                itemFound =true;
+                if (printHeader) {
+                    System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n",
+                        "Price NOK", "ItemNumber", "Item Description", "Item Brand" , "Amount Left");
+                    System.out.println("----------------------------------------------------------------------------------------------------------------");
+                    printHeader = false;
+                }
+                // First create the text to display the borrowed status
+                System.out.printf("%-20d  %-20s  %-40s  %-30s  %-20s %n",
+                    item.getItemPrice(),item.getItemNumber(),item.getItemDescription(),
+                    item.getItemBrandName(),item.getNumberOfItemsInStorage());
+            }
+        }
+    }
+
 }
 

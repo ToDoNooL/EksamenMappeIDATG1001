@@ -72,21 +72,32 @@ public class StoreHouseMenuUI
                 printUserInterface.printAllItems();
                 break;
             case 2:
+                StoreHouseSearchForItem storeHouseSearchForItem =
+                    new StoreHouseSearchForItem(itemRegister);
+                storeHouseSearchForItem.ItemSearch("");
                 break;
             case 3:
                 StoreHouseAddItem storeHouseAddItem = new StoreHouseAddItem(itemRegister);
                 storeHouseAddItem.addItemMenu();
                 break;
             case 4:
+                StoreHouseEditAmountOfITem storeHouseEditAmountOfITem =
+                    new StoreHouseEditAmountOfITem(itemRegister);
+                storeHouseEditAmountOfITem.increaseItemAmount();
                 break;
             case 5:
+                StoreHouseEditAmountOfITem storeHouseEditAmountOfITem1 =
+                    new StoreHouseEditAmountOfITem(itemRegister);
+                storeHouseEditAmountOfITem1.decreaseItemAmount();
                 break;
             case 6:
-                Scanner scanner = new Scanner(System.in);
-                String userInputS = scanner.nextLine();
-                itemRegister.deleteItemFromStorage(userInputS);
+                StoreHouseDeleteItem storeHouseDeleteItem = new StoreHouseDeleteItem(itemRegister);
+                storeHouseDeleteItem.deleteItemV2("");
                 break;
             case 7:
+                StoreHouseManagerChangeItem storeHouseManagerChangeItem =
+                    new StoreHouseManagerChangeItem(itemRegister);
+                storeHouseManagerChangeItem.storeHouseManagerChangeItemMethod();
                 break;
             case 8:
                 break;
@@ -170,6 +181,6 @@ public class StoreHouseMenuUI
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Blue").setItemDescription(
                     "Fancy floor to house").setItemHeight(25).setItemLenght(150).setItemPrice(2500).
                 setItemBrandName("NorwegianFoorAS")
-                .setItemNumber("FLOB123").setNumberOfItemsInStorage(1).getItem());
+                .setItemNumber("FLOB123").setNumberOfItemsInStorage(100).setCategoriesOfItems(1).getItem());
     }
 }

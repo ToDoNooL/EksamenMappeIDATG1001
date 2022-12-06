@@ -14,11 +14,13 @@ package itemStorage;
         private float itemHeight; // The Height Of the Item
         private String colourOfItem; //The colour of the item
         private int numberOfItemsInStorage; //the amount of items left in storage
-        private String categoriesOfItems; //items category
+        private int categoriesOfItems; //items category
+        private float itemDiscount; //item discount
 
         public Item(String itemDescription, String itemNumber, int itemPrice,
                            String itemBrandName, float itemWeight, float itemLenght, float itemHeight,
-                           String colourOfItem, int numberOfItemsInStorage, String categoriesOfItems)
+                           String colourOfItem, int numberOfItemsInStorage,
+                    int categoriesOfItems)
         {
             setItemDescription(itemDescription);
             setItemNumber(itemNumber);
@@ -122,12 +124,12 @@ package itemStorage;
             this.numberOfItemsInStorage = numberOfItemsInStorage;
         }
 
-        public String getCategoriesOfItems()
+        public int getCategoriesOfItems()
         {
             return categoriesOfItems;
         }
 
-        public void setCategoriesOfItems(String categoriesOfItems)
+        public void setCategoriesOfItems(int categoriesOfItems)
         {
             this.categoriesOfItems = categoriesOfItems;
         }

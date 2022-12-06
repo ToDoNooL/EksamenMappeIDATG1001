@@ -1,5 +1,7 @@
 package itemStorage;
 
+import utilities.CheckIfValid;
+
 public class ItemBuilder
 {
     private String itemDescription; //A small Description of the item
@@ -11,7 +13,8 @@ public class ItemBuilder
     private float itemHeight; // The Height Of the Item
     private String colourOfItem; //The colour of the item
     private int numberOfItemsInStorage; //the amount of items left in storage
-    private String categoriesOfItems; //items category
+    private int categoriesOfItems; //items category
+    private CheckIfValid checkIfValid = new CheckIfValid();
 
     public ItemBuilder setItemDescription(String itemDescription)
     {
@@ -60,14 +63,17 @@ public class ItemBuilder
         this.colourOfItem = colourOfItem;
         return this;
     }
-
     public ItemBuilder setNumberOfItemsInStorage(int numberOfItemsInStorage)
     {
-        this.numberOfItemsInStorage = numberOfItemsInStorage;
-        return this;
+        if (checkIfValid.checkIfNumberIsNotLowerThanZero(numberOfItemsInStorage))
+        {
+            this.numberOfItemsInStorage = numberOfItemsInStorage;
+            return this;
+        }
+        else return setNumberOfItemsInStorage(0);
     }
 
-    public ItemBuilder setCategoriesOfItems(String categoriesOfItems)
+    public ItemBuilder setCategoriesOfItems(int categoriesOfItems)
     {
         this.categoriesOfItems = categoriesOfItems;
         return this;
