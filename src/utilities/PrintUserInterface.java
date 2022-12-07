@@ -1,7 +1,7 @@
 package utilities;
 
-import itemStorage.Item;
-import itemStorage.ItemRegister;
+import itemstorage.Item;
+import itemstorage.ItemRegister;
 import java.util.Iterator;
 
 /**

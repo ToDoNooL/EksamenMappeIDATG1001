@@ -1,6 +1,6 @@
 package utilities;
 
-import itemStorage.Item;
+import itemstorage.Item;
 
 public class CheckIfValid
 {

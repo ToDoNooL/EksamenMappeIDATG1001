@@ -1,6 +1,6 @@
 package wareHouseManagerUI;
 
-import itemStorage.ItemRegister;
+import itemstorage.ItemRegister;
 import java.util.Scanner;
 import utilities.PrintUserInterface;
 
