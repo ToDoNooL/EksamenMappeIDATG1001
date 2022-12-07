@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="Second commit, this is the early stage of code that i took from my old code">
-      <change afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseDeleteItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseEditAmountOfITem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseManagerChangeItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseSearchForItem.java" afterDir="false" />
+    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="third commit, need to add foolprof on methods, and lacking ENUM class">
+      <change afterPath="$PROJECT_DIR$/src/itemStorage/ItemCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/itemStorage/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemStorage/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemStorage/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemStorage/ItemBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/itemStorage/ItemRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemStorage/ItemRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseAddItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseAddItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseMenuUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,7 @@
       <updated>1669918639986</updated>
       <workItem from="1669918641787" duration="360000" />
       <workItem from="1669919404088" duration="31534000" />
-      <workItem from="1670079061587" duration="38609000" />
+      <workItem from="1670079061587" duration="47608000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1669918825822</created>
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669920445058</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="third commit, need to add foolprof on methods, and lacking ENUM class">
+      <created>1670339033586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670339033586</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit, this is the early stage of code that i took from my old code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit, this is the early stage of code that i took from my old code" />
+    <MESSAGE value="third commit, need to add foolprof on methods, and lacking ENUM class" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit, need to add foolprof on methods, and lacking ENUM class" />
   </component>
 </project>

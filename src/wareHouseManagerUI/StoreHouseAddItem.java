@@ -17,6 +17,7 @@ public class StoreHouseAddItem
     private String tempValueString;
     private int tempValueInt;
     private float tempValueFloat;
+    private int tempValueIntCategory;
     private final Scanner scannerForAddItem = new Scanner(System.in).useLocale(Locale.GERMAN);
 
     public StoreHouseAddItem(ItemRegister itemRegister)
@@ -58,7 +59,7 @@ public class StoreHouseAddItem
         boolean validDescription = false;
         do
         {
-            String temp = scannerForAddItem.next();
+            String temp = scannerForAddItem.next().trim();
             if (checkIfValid.checkIfValidString(temp))
             {
                 tempValueString = temp;
@@ -96,6 +97,9 @@ public class StoreHouseAddItem
             case 2:
                 printUserInterface.printEnterNewPrice();
                 break;
+            case 3:
+                printUserInterface.printEnterAmountOfItem();
+                break;
         }
         boolean validPrice = false;
         do
@@ -118,11 +122,34 @@ public class StoreHouseAddItem
                         printUserInterface.printValidPrice();
                         break;
                     case 2:
-
+                        printUserInterface.printValidAmount();
+                        break;
                 }
             }
         } while (!validPrice);
         return tempValueInt;
+    }
+    private int waitForValidCategory()
+    {
+        printUserInterface.printEnterForItemCategory();
+        boolean validPrice = false;
+        do
+        {
+            if (scannerForAddItem.hasNextInt())
+            {
+                int temp = scannerForAddItem.nextInt();
+                if (checkIfValid.checkValidIntCategory(temp))
+                {
+                    tempValueIntCategory = temp;
+                    validPrice = true;
+                }
+            }
+            else
+            {
+                scannerForAddItem.next();
+            }
+        } while (!validPrice);
+        return tempValueIntCategory;
     }
     private float waitForValidFloat(int infoText, int errorMessage)
     {
@@ -220,6 +247,8 @@ public class StoreHouseAddItem
         float itemLenght = 0; //Length Of the Item
         float itemHeight = 0; // The Height Of the Item
         String colourOfItem = ""; //The colour of the item
+        int itemAmount = 0; //The Amount Of items In Storage
+        int itemCategory = 0; //The Category of the item, Enum
 
         itemDescription = waitForValidString(1,1);
 
@@ -237,10 +266,17 @@ public class StoreHouseAddItem
 
         itemNumber = waitForValidString(4,4);
 
+        itemAmount = waitForValidInt(3,2);
+
+        itemCategory = waitForValidCategory();
+
+
+
+
         Item item =
             new ItemBuilder().setColourOfItem(colourOfItem).setItemNumber(itemNumber).setItemPrice(itemPrice)
             .setItemBrandName(itemBrandName).setItemLenght(itemLenght).setItemHeight(itemHeight).setItemWeight(itemWeight)
-            .setItemDescription(itemDescription).getItem();
+            .setItemDescription(itemDescription).setNumberOfItemsInStorage(itemAmount).setCategoriesOfItems(itemCategory).getItem();
         itemRegister.addItem(item);
     }
 

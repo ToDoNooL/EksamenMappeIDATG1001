@@ -100,6 +100,7 @@ public class StoreHouseMenuUI
                 storeHouseManagerChangeItem.storeHouseManagerChangeItemMethod();
                 break;
             case 8:
+                printUserInterface.printAllItemsWithAllDetails();
                 break;
 
         }
@@ -138,45 +139,45 @@ public class StoreHouseMenuUI
     {
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Yellow").setItemDescription("Big Box")
                 .setItemHeight(75).setItemLenght(100).setItemPrice(100).setItemBrandName(
-                    "WoodCooper").setItemNumber("ABC").setNumberOfItemsInStorage(10).getItem());
+                    "WoodCooper").setItemNumber("ABC").setNumberOfItemsInStorage(10).setCategoriesOfItems(2).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Brown").setItemDescription(
                 "Small Box").setItemHeight(60).setItemLenght(70).setItemPrice(250).setItemBrandName("BoxMan")
-                .setItemNumber("ABC1").setNumberOfItemsInStorage(100).getItem());
+                .setItemNumber("ABC1").setNumberOfItemsInStorage(100).setCategoriesOfItems(4).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Brown").setItemDescription(
                     "Small Box").setItemHeight(60).setItemLenght(70).setItemPrice(200).setItemBrandName("BoxMan")
-                .setItemNumber("ABC2").setNumberOfItemsInStorage(50).getItem());
+                .setItemNumber("ABC2").setNumberOfItemsInStorage(50).setCategoriesOfItems(3).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Brown").setItemDescription(
                     "A box we don't know").setItemHeight(100).setItemLenght(100).setItemPrice(500).
                 setItemBrandName("BoxMan")
-                .setItemNumber("ABC23").setNumberOfItemsInStorage(43).getItem());
+                .setItemNumber("ABC23").setNumberOfItemsInStorage(43).setCategoriesOfItems(1).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Blue").setItemDescription(
                     "Window For Building").setItemHeight(150).setItemLenght(200).setItemPrice(333).
                 setItemBrandName("WindowMan")
-                .setItemNumber("C3321").setNumberOfItemsInStorage(54).getItem());
+                .setItemNumber("C3321").setNumberOfItemsInStorage(54).setCategoriesOfItems(4).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Green").setItemDescription(
                     "This is wood from Norway").setItemHeight(25).setItemLenght(500).setItemPrice(666).
                 setItemBrandName("NorwegianWoodAS")
-                .setItemNumber("LOGR123").setNumberOfItemsInStorage(23).getItem());
+                .setItemNumber("LOGR123").setNumberOfItemsInStorage(23).setCategoriesOfItems(4).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Green").setItemDescription(
                     "This is wood from Norway premium").setItemHeight(25).setItemLenght(500).setItemPrice(800).
                 setItemBrandName("NorwegianWoodAS")
-                .setItemNumber("LOG123").setNumberOfItemsInStorage(100).getItem());
+                .setItemNumber("LOG123").setNumberOfItemsInStorage(100).setCategoriesOfItems(3).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Brown").setItemDescription(
                     "Flooring to house").setItemHeight(25).setItemLenght(100).setItemPrice(1000).
                 setItemBrandName("NorwegianFoorAS")
-                .setItemNumber("FLO123").setNumberOfItemsInStorage(250).getItem());
+                .setItemNumber("FLO123").setNumberOfItemsInStorage(250).setCategoriesOfItems(2).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Red").setItemDescription(
                     "Fancy floor to house").setItemHeight(25).setItemLenght(150).setItemPrice(1500).
                 setItemBrandName("NorwegianFoorAS")
-                .setItemNumber("FLOR123").setNumberOfItemsInStorage(4).getItem());
+                .setItemNumber("FLOR123").setNumberOfItemsInStorage(4).setCategoriesOfItems(1).getItem());
 
             this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Blue").setItemDescription(
                     "Fancy floor to house").setItemHeight(25).setItemLenght(150).setItemPrice(2500).

@@ -70,6 +70,10 @@ public class CheckIfValid
     {
         return userInput >= 0 && userInput <= 8;
     }
+    public boolean checkValidIntCategory(int userInput)
+    {
+        return userInput >= 0 && userInput <=4;
+    }
 
     public boolean checkIfValidAddToList(int userInput)
     {

@@ -1,6 +1,8 @@
 package itemStorage;
 
-    /**
+import utilities.CheckIfValid;
+
+/**
      * The type Item for list.
      */
     public class Item
@@ -14,8 +16,10 @@ package itemStorage;
         private float itemHeight; // The Height Of the Item
         private String colourOfItem; //The colour of the item
         private int numberOfItemsInStorage; //the amount of items left in storage
-        private int categoriesOfItems; //items category
-        private float itemDiscount; //item discount
+        private ItemCategory categoriesOfItems; //items category
+        private CheckIfValid checkIfValid = new CheckIfValid();
+
+        private ItemCategory itemCategory;
 
         public Item(String itemDescription, String itemNumber, int itemPrice,
                            String itemBrandName, float itemWeight, float itemLenght, float itemHeight,
@@ -32,6 +36,7 @@ package itemStorage;
             setColourOfItem(colourOfItem);
             setNumberOfItemsInStorage(numberOfItemsInStorage);
             setColourOfItem(colourOfItem);
+            setCategoriesOfItems(categoriesOfItems);
         }
 
         public String getItemDescription()
@@ -121,17 +126,21 @@ package itemStorage;
 
         public void setNumberOfItemsInStorage(int numberOfItemsInStorage)
         {
-            this.numberOfItemsInStorage = numberOfItemsInStorage;
+            if (checkIfValid.checkIfNumberIsNotLowerThanZero(numberOfItemsInStorage))
+            {
+                this.numberOfItemsInStorage = numberOfItemsInStorage;
+            }
+            else this.numberOfItemsInStorage = 0;
         }
 
-        public int getCategoriesOfItems()
+        public ItemCategory getCategoriesOfItems()
         {
             return categoriesOfItems;
         }
 
         public void setCategoriesOfItems(int categoriesOfItems)
         {
-            this.categoriesOfItems = categoriesOfItems;
+            this.categoriesOfItems = ItemCategory.valueOfNumber(categoriesOfItems);
         }
 
     }

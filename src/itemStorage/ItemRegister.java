@@ -7,12 +7,14 @@ import java.util.Iterator;
 public class ItemRegister
 {
     private final HashMap<String, Item> itemList;
-    private final HashMap<String, Item> tempItemList;
+
+    private final HashMap<String, ItemCategory> itemCategory;
+
 
     public ItemRegister()
     {
         this.itemList = new HashMap<>();
-        this.tempItemList = new HashMap<>();
+        this.itemCategory = new HashMap<>();
     }
 
     public boolean addItem(Item item)
@@ -135,7 +137,6 @@ public class ItemRegister
         {
             if(item.getItemNumber().equalsIgnoreCase(itemNumber))
             {
-
                 item.setItemPrice(item.getItemPrice()* (100-discount)/100);
                 foundItem.add(item);
             }
@@ -177,7 +178,6 @@ public class ItemRegister
         }
         return foundItem.iterator();
     }
-
 
     public int getNumberOfItems()
     {

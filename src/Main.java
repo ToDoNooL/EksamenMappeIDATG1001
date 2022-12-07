@@ -1,3 +1,5 @@
+import itemStorage.ItemCategory;
+import itemStorage.ItemRegister;
 import wareHouseManagerUI.StoreHouseMenuUI;
 
 public class Main

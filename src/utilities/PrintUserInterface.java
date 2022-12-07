@@ -74,6 +74,14 @@ public class PrintUserInterface
     {
         System.out.println("Please Enter a Valid Number [0 to 8]");
     }
+
+    /**
+     * Prints the error message if the number is not valid, outside the range of 0 and 4
+     */
+    public void printValidNumberFrom0to4()
+    {
+        System.out.println("Please Enter a Valid Number [0 to 4]");
+    }
     /**
      * Prints the error message if the number is not valid, outside the range of 0 and 1
      */
@@ -340,6 +348,21 @@ public class PrintUserInterface
                 item.getItemBrandName(),item.getNumberOfItemsInStorage());
         }
     }
+    public void printAllItemsWithAllDetails()
+    {
+        Iterator<Item> it = this.itemRegister.getIterator();
+        System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s  %-20s %n",
+            "Price NOK", "ItemNumber", "Item Description", "Item Brand" , "Amount Left", "Item " +
+                "Category");
+        System.out.println("----------------------------------------------------------------------------------------------------------------");
+        while (it.hasNext()) {
+            Item item = it.next();
+            // First create the text to display the borrowed status
+            System.out.printf("%-20d  %-20s  %-40s  %-30s  %-20s  %-20s %n",
+                item.getItemPrice(),item.getItemNumber(),item.getItemDescription(),
+                item.getItemBrandName(),item.getNumberOfItemsInStorage(),item.getCategoriesOfItems());
+        }
+    }
 
     public void printHowToDeleteItem()
     {
@@ -362,6 +385,23 @@ public class PrintUserInterface
     {
         System.out.println("[1] Yes Delete this item.");
         System.out.println("[0] No Keep Item");
+    }
+    public void printEnterAmountOfItem()
+    {
+        System.out.println("Enter the Amount of The Item You wanna Add");
+    }
+    public void printValidAmount()
+    {
+        System.out.println("Enter A Valid Amount");
+    }
+    public void printEnterForItemCategory()
+    {
+        System.out.println("Enter The Corresponding number for right category");
+        System.out.println("[1] Floor Laminates");
+        System.out.println("[2] Windows");
+        System.out.println("[3] Doors");
+        System.out.println("[4] Lumber");
+        System.out.println("[0] Not sure(Can set later if you don't know the category)");
     }
     public void printSearchItem(String searchUserInput)
     {
