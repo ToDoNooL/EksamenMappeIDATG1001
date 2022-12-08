@@ -46,7 +46,7 @@ public class CheckIfValid {
    * @param userInput the input a user gives, a whole number(int).
    * @return returns Boolean if userInput is between 0 and 1 int.
    */
-  public boolean checkValidIntInExit(int userInput) {
+  public boolean checkValidIntYesOrNo(int userInput) {
     return userInput >= 0 &&  userInput <= 1;
   }
 

@@ -431,6 +431,38 @@ public class PrintUserInterface {
   }
 
   /**
+   * This method Prints the Enter new Amount added to Register.
+   */
+  public void printEnterNewAmountItem() {
+    System.out.println("Enter The How Much You Wanna Increase the item Amount with: ");
+  }
+
+  /**
+   * This method Prints the Enter new Amount taken from Register.
+   */
+  public void printEnterSmallerAmountItem() {
+    System.out.println("Enter The How Much You Wanna Decrease the item Amount with: ");
+  }
+
+  /**
+   * This method prints the Change item Menu.
+   */
+  public void printChangeItemMenu() {
+    System.out.println("[1] set new Description");
+    System.out.println("[2] set new Price");
+    System.out.println("[3] set Discount on Item");
+    System.out.println("[4] set Description/Price/Discount");
+    System.out.println("[0] go back");
+  }
+
+  /**
+   * This Method prints to enter new discount message.
+   */
+  public void printEnterNewDiscount() {
+    System.out.println("Enter The New Discount on The Item");
+  }
+
+  /**
    * This method Prints Enter category menu with Enum.
    */
   public void printEnterForItemCategory() {
