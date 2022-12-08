@@ -26,7 +26,7 @@ public class Item {
    * The item Constructor.
 
    * @param itemDescription String (Example, a small box)
-   * @param itemNumber String (Example ABCDE4)
+   * @param itemNumber String (Example ABIDE4)
    * @param itemPrice  int (Example 600)
    * @param itemBrandName String (Example Lumberman)
    * @param itemWeight Float (Example 66,6)
@@ -34,7 +34,7 @@ public class Item {
    * @param itemHeight Float (Example 66,6)
    * @param colourOfItem String (Example Yellow)
    * @param numberOfItemsInStorage int (Example 20)
-   * @param categoriesOfItems int (Example 4 with Edum. So we get a String)
+   * @param categoriesOfItems int (Example 4 with Enum. So we get a String)
    */
   public Item(String itemDescription, String itemNumber, int itemPrice,
               String itemBrandName, float itemWeight, float itemLenght,

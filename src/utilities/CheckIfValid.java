@@ -2,91 +2,115 @@ package utilities;
 
 import itemstorage.Item;
 
-public class CheckIfValid
-{
 /**
- * The type Check if number is not lower than zero.
+ * This class is used to handle all the Valid checks for the application.
+
+ *  @author Eskil Alstad
+ *
+ *  @version 2022-12-07
  */
-    private boolean validInt;
+public class CheckIfValid {
+  /**
+   * Check if value is less than 0 or 0 returns true or false.
 
-    /**
-     * <p></p>
-     * Check if value is les than 0 or 0 returns    true or false.
-     *
-     * @param intToCheck temp value to see if int it less than 0.
-     * @return if the valid int is true or false.
-     */
-    public boolean checkIfNumberIsNotLowerThanZero(int intToCheck)
-    {
-        validInt = intToCheck >= 0;
-        return validInt;
-    }
+   * @param intToCheck temp value to see if int it less than 0.
+   * @return if the valid int is true or false.
+   */
+  public boolean checkIfNumberIsNotLowerThanZero(int intToCheck) {
+    return intToCheck >= 0;
+  }
 
-    /**
-     *
-     * @param userInput the input a user gives us
-     * @return returns Boolean if userInput is between 0 and 9 only int
-     */
-    public boolean checkValidIntIntMenu(int userInput)
-    {
-        return userInput >= 0 &&  userInput <= 8;
-    }
+  /**
+   * This Method is used to check if the user input is between 0 and 8.
 
-    /**
-     *
-     * @param userInput
-     * @return
-     */
-    public boolean checkValidIntInHelp(int userInput)
-    {
-        return userInput >= 0 &&  userInput <= 5;
-    }
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 8 int.
+   */
+  public boolean checkValidIntIntMenu(int userInput) {
+    return userInput >= 0 &&  userInput <= 8;
+  }
 
-    /**
-     *
-     * @param userInput
-     * @return
-     */
-    public boolean checkValidIntInExit(int userInput)
-    {
-        return userInput >= 0 &&  userInput <= 1;
-    }
+  /**
+   * This Method is used to check if the user input is between 0 and 5.
 
-    public boolean checkValidIntAddItem(int userInput)
-    {
-        return userInput >= 0 && userInput <=2;
-    }
-    public boolean checkIfValidString(String userInput)
-    {
-        return !userInput.isBlank() && !userInput.isEmpty();
-    }
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 5 int.
+   */
+  public boolean checkValidIntInHelp(int userInput) {
+    return userInput >= 0 &&  userInput <= 5;
+  }
 
-    public  boolean checkIfValidFloat(float userInput)
-    {
-        return userInput > 0;
-    }
+  /**
+   * This Method is used to check if the user input is between 0 and 1.
 
-    public boolean checkIfValidAddItemEdit(int userInput)
-    {
-        return userInput >= 0 && userInput <= 8;
-    }
-    public boolean checkValidIntCategory(int userInput)
-    {
-        return userInput >= 0 && userInput <=4;
-    }
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 1 int.
+   */
+  public boolean checkValidIntInExit(int userInput) {
+    return userInput >= 0 &&  userInput <= 1;
+  }
 
-    public boolean checkIfValidAddToList(int userInput)
-    {
-        return userInput >= 0 && userInput <=2;
-    }
+  /**
+   * This Method is used to check if the user input is between 0 and 2.
 
-    public boolean checkAddItem(Item item)
-    {
-        if (null == item)
-        {
-            return false;
-        }
-        return true;
-    }
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 2 int.
+   */
+  public boolean checkValidIntAddItem(int userInput) {
+    return userInput >= 0 && userInput <= 2;
+  }
+
+  /**
+   * This Method is used to check if the user input is blank or empty, if so return false.
+
+   * @param userInput the input a user gives, a whole number(string).
+   * @return returns Boolean if userInput is valid.
+   */
+  public boolean checkIfValidString(String userInput) {
+    return !userInput.isBlank() && !userInput.isEmpty();
+  }
+
+  public  boolean checkIfValidFloat(float userInput) {
+    return userInput > 0;
+  }
+
+  /**
+   * This method is used to see if the userInput is between 0 and 8 (int).
+
+   * @param userInput userInput in application as int.
+   * @return Returns boolean if valid returns true, else false.
+   */
+  public boolean checkIfValidAddItemEdit(int userInput) {
+    return userInput >= 0 && userInput <= 8;
+  }
+  /**
+   * This Method is used to check if the user input is between 0 and 4.
+
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 4 int.
+   */
+  public boolean checkValidIntCategory(int userInput) {
+    return userInput >= 0 && userInput <= 4;
+  }
+
+  /**
+   * This Method is used to check if the user input is between 0 and 2.
+
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 0 and 2 int.
+   */
+  public boolean checkIfValidAddToList(int userInput) {
+    return userInput >= 0 && userInput <= 2;
+  }
+
+  /**
+   * This Method is used to check if the item is null return true or false.
+
+   * @param item checks if the item is null
+   * @return returns Boolean if the item == null, false. if not = true.
+   */
+  public boolean checkAddItem(Item item) {
+    return null != item;
+  }
 }
 

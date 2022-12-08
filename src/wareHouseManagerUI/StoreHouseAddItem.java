@@ -41,7 +41,7 @@ public class StoreHouseAddItem
                 printUserInterface.printEnterBrand();
                 break;
             case 4:
-                printUserInterface.printEnterItemnumber();
+                printUserInterface.printEnterItemNumber ();
                 break;
             case 5:
                 printUserInterface.printEnterNewDescription();

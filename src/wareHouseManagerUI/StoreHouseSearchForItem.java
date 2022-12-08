@@ -21,7 +21,7 @@ public class StoreHouseSearchForItem
 
     public void ItemSearch(String searchInput)
     {
-        printUserInterface.printEnterItemnumber();
+        printUserInterface.printEnterItemNumber ();
         boolean userInputValid = false;
         do
         {
