@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="sixth commit,CheckStyle and Sonarlink has been checked on the Utilites collection">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itemstorage/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseAddItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseAddItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseDeleteItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseDeleteItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseEditAmountOfITem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseEditAmountOfItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseExit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseExit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseManagerChangeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wareHouseManagerUI/StoreHouseSearchForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseSearchForItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseAddItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseAddItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseEditAmountOfItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseEditAmountOfItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +41,17 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utilities" />
@@ -83,7 +82,10 @@
       <workItem from="1669918641787" duration="360000" />
       <workItem from="1669919404088" duration="31534000" />
       <workItem from="1670079061587" duration="58722000" />
-      <workItem from="1670434496450" duration="24967000" />
+      <workItem from="1670434496450" duration="25936000" />
+      <workItem from="1670509272839" duration="1253000" />
+      <workItem from="1670510561914" duration="171000" />
+      <workItem from="1670510752107" duration="25248000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1669918825822</created>
@@ -148,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670459695058</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection">
+      <created>1670505199765</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670505199765</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,7 @@
     <MESSAGE value="forth commit, Enum and all functions has been added, now I need to fix, bugs, and do checkstyle. (if time see look after new functions)" />
     <MESSAGE value="fifth commit, Edum has been added, CheckStyle has been checked on the itemStorage collection" />
     <MESSAGE value="sixth commit,CheckStyle and Sonarlink has been checked on the Utilites collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="sixth commit,CheckStyle and Sonarlink has been checked on the Utilites collection" />
+    <MESSAGE value="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection" />
   </component>
 </project>

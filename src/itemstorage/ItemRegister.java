@@ -119,7 +119,7 @@ public class ItemRegister {
     // whole collection
     for (Item item : this.itemList.values()) {
       if (item.getItemNumber().equalsIgnoreCase(itemNumber)) {
-        item.setNumberOfItemsInStorage(getNumberOfItems() + newAmount);
+        item.setNumberOfItemsInStorage(item.getNumberOfItemsInStorage() + newAmount);
         foundItems.add(item);
       }
     }
@@ -140,7 +140,7 @@ public class ItemRegister {
     // whole collection
     for (Item item : this.itemList.values()) {
       if (item.getItemNumber().equalsIgnoreCase(itemNumber)) {
-        item.setNumberOfItemsInStorage(getNumberOfItems() - newAmount);
+        item.setNumberOfItemsInStorage(item.getNumberOfItemsInStorage() - newAmount);
         foundItems.add(item);
       }
     }

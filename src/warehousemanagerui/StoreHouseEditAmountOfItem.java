@@ -2,6 +2,7 @@ package warehousemanagerui;
 
 import itemstorage.ItemRegister;
 import java.util.Scanner;
+import utilities.CheckIfValid;
 import utilities.PrintUserInterface;
 
 /**
@@ -15,12 +16,19 @@ import utilities.PrintUserInterface;
 public class StoreHouseEditAmountOfItem {
   private final ItemRegister itemRegister;
   private final PrintUserInterface printUserInterface;
+  private final CheckIfValid checkIfValid;
   private String searchUserInput = "";
   private int newAmount;
 
+  /**
+   * This method is used to call the itemRegister.
+
+   * @param itemRegister uses the itemRegister Class.
+   */
   public StoreHouseEditAmountOfItem(ItemRegister itemRegister) {
     this.itemRegister = itemRegister;
     this.printUserInterface = new PrintUserInterface(itemRegister);
+    this.checkIfValid = new CheckIfValid();
   }
 
   /**
@@ -32,8 +40,20 @@ public class StoreHouseEditAmountOfItem {
     searchUserInput = scanner.nextLine();
     printUserInterface.printSearchItem(searchUserInput);
     printUserInterface.printEnterNewAmountItem();
-    newAmount = scanner.nextInt();
-    itemRegister.setNewHigherAmountInStorages(searchUserInput, newAmount);
+    boolean userInputValid = false;
+    do {
+      if (scanner.hasNextInt()) {
+        newAmount = scanner.nextInt();
+        if (checkIfValid.checkIfNumberIsNotLowerThanZero(newAmount)) {
+          itemRegister.setNewHigherAmountInStorages(searchUserInput, newAmount);
+          userInputValid = true;
+        }
+      } else {
+        scanner.nextLine();
+        printUserInterface.printValidAmount();
+      }
+    } while (!userInputValid);
+
     printUserInterface.printSearchItem(searchUserInput);
   }
 
@@ -46,8 +66,19 @@ public class StoreHouseEditAmountOfItem {
     searchUserInput = scanner.nextLine();
     printUserInterface.printSearchItem(searchUserInput);
     printUserInterface.printEnterSmallerAmountItem();
-    newAmount = scanner.nextInt();
-    itemRegister.setNewLowerAmountInStorage(searchUserInput, newAmount);
+    boolean userInputValid = false;
+    do {
+      if (scanner.hasNextInt()) {
+        newAmount = scanner.nextInt();
+        if (checkIfValid.checkIfNumberIsNotLowerThanZero(newAmount)) {
+          itemRegister.setNewLowerAmountInStorage(searchUserInput, newAmount);
+          userInputValid = true;
+        }
+      } else {
+        scanner.nextLine();
+        printUserInterface.printValidAmount();
+      }
+    } while (!userInputValid);
     printUserInterface.printSearchItem(searchUserInput);
   }
 }

@@ -63,12 +63,13 @@ public class StoreHouseAddItem {
     }
     boolean validDescription = false;
     do {
-      String temp = scannerForAddItem.next().trim();
-      if (checkIfValid.checkIfValidString(temp)) {
-        tempValueString = temp;
-        validDescription = true;
-      } else if (!checkIfValid.checkIfValidString(temp)) {
-        scannerForAddItem.nextLine();
+      if (scannerForAddItem.hasNextLine()) {
+        String temp = scannerForAddItem.nextLine();
+        if (checkIfValid.checkIfValidString(temp)) {
+          tempValueString = temp;
+          validDescription = true;
+        }
+      } else {
         switch (errorMessage) {
           case 1 -> printUserInterface.printValidDescription();
           case 2 -> printUserInterface.printValidColour();

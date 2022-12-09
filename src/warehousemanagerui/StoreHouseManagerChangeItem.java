@@ -17,10 +17,7 @@ public class StoreHouseManagerChangeItem {
   public final ItemRegister itemRegister;
   public final PrintUserInterface printUserInterface;
   public final CheckIfValid checkIfValid;
-  private String searchUserInput = "";
-  private int newPrice;
-  private int newDiscount;
-  private String newDescription;
+
   private final Scanner userInputForStoreHouse = new Scanner(System.in);
 
   /**
@@ -60,7 +57,7 @@ public class StoreHouseManagerChangeItem {
         setNewPriceOnItem();
         break;
       case 3:
-        setDiscountOnItem();
+        setNewDiscount();
         break;
       case 4:
         changeDescriptionPriceAndDiscount();
@@ -73,62 +70,120 @@ public class StoreHouseManagerChangeItem {
   }
 
   /**
+   * This method takes userInput as String and checks if it is valid then Returns it.
+
+   * @return Returns a valid String.
+   */
+  private String waitValidString() {
+    String itemNumber = "";
+    boolean userValid = false;
+    do {
+      if (userInputForStoreHouse.hasNextLine()) {
+        itemNumber = userInputForStoreHouse.nextLine();
+        if (checkIfValid.checkIfValidString(itemNumber)) {
+          userValid = true;
+        }
+      } else {
+        printUserInterface.printValidItemNumber();
+      }
+    } while (!userValid);
+    return itemNumber;
+  }
+
+  /**
+   * This method takes userInput as int and checks if it is valid int then Returns it.
+
+   * @return Returns a valid int, not lower than 0.
+   */
+  private int waitValidInt() {
+    int newPrice = 0;
+    boolean validInput = false;
+    do {
+      if (userInputForStoreHouse.hasNextInt()) {
+        newPrice = userInputForStoreHouse.nextInt();
+        if (checkIfValid.checkIfNumberIsNotLowerThanZero(newPrice)) {
+          validInput = true;
+        }
+      } else {
+        userInputForStoreHouse.next();
+        printUserInterface.printValidPrice();
+      }
+    } while (!validInput);
+    return newPrice;
+  }
+
+  /**
+   * This method takes userInput as int and checks if it is valid discount then Returns it.
+
+   * @return Returns a valid discount not higher than 100 and not lover or equal to 0.
+   */
+  private int waitValidDiscount() {
+    boolean validInput = false;
+    int newDiscount = 0;
+    do {
+      if (userInputForStoreHouse.hasNextInt()) {
+        newDiscount = userInputForStoreHouse.nextInt();
+        if (checkIfValid.checkIfValidDiscount(newDiscount)) {
+          validInput = true;
+        }
+      } else {
+        userInputForStoreHouse.next();
+        printUserInterface.printValidItemNumber();
+      }
+    } while (!validInput);
+    return newDiscount;
+  }
+
+  /**
    * This method is used to set a new price on an item in register.
    */
-  public void setNewPriceOnItem() {
-    Scanner scanner = new Scanner(System.in);
+  private void setNewPriceOnItem() {
     printUserInterface.printEnterItemNumber();
-    searchUserInput = scanner.nextLine();
-    printUserInterface.printSearchItem(searchUserInput);
+    String itemNumber = waitValidString();
+    printUserInterface.printSearchItem(itemNumber);
     printUserInterface.printEnterNewPrice();
-    newPrice = scanner.nextInt();
-    itemRegister.setNewPriceOnItem(searchUserInput, newPrice);
-    printUserInterface.printSearchItem(searchUserInput);
+    int newPrice = waitValidInt();
+    itemRegister.setNewPriceOnItem(itemNumber, newPrice);
+    printUserInterface.printSearchItem(itemNumber);
   }
 
   /**
    * This method is used to set a discount on an item in register.
    */
-  public void setDiscountOnItem() {
-    Scanner scanner = new Scanner(System.in);
+  private void setNewDiscount() {
     printUserInterface.printEnterItemNumber();
-    searchUserInput = scanner.nextLine();
-    printUserInterface.printSearchItem(searchUserInput);
+    String itemNumber = waitValidString();
     printUserInterface.printEnterNewDiscount();
-    newDiscount = scanner.nextInt();
-    itemRegister.setDiscountOnItem(searchUserInput, newDiscount);
-    printUserInterface.printSearchItem(searchUserInput);
+    int newDiscount = waitValidDiscount();
+    itemRegister.setDiscountOnItem(itemNumber, newDiscount);
+    printUserInterface.printSearchItem(itemNumber);
   }
 
   /**
    * This method is used to set a new description on an item.
    */
-  public void setNewDescription() {
-    Scanner scanner = new Scanner(System.in);
+  private void setNewDescription() {
     printUserInterface.printEnterItemNumber();
-    searchUserInput = scanner.nextLine();
-    printUserInterface.printSearchItem(searchUserInput);
-    printUserInterface.printEnterNewDiscount();
-    newDescription = scanner.nextLine();
-    itemRegister.setNewDescription(searchUserInput, newDescription);
-    printUserInterface.printSearchItem(searchUserInput);
+    String itemNumber = waitValidString();
+    printUserInterface.printEnterNewDescription();
+    String newDescription = waitValidString();
+    itemRegister.setNewDescription(itemNumber, newDescription);
+    printUserInterface.printSearchItem(itemNumber);
   }
 
   /**
    * This method is used to change the Item Description, price, and Discount.
    */
-  public void changeDescriptionPriceAndDiscount() {
-    Scanner scanner = new Scanner(System.in);
+  private void changeDescriptionPriceAndDiscount() {
     printUserInterface.printEnterItemNumber();
-    searchUserInput = scanner.nextLine();
-    printUserInterface.printSearchItem(searchUserInput);
+    final String itemNumber = waitValidString();
     printUserInterface.printEnterNewDescription();
-    newDescription = scanner.nextLine().trim();
+    String newDescription = waitValidString();
     printUserInterface.printEnterNewPrice();
-    newPrice = scanner.nextInt();
+    int newPrice = waitValidInt();
     printUserInterface.printEnterNewDiscount();
-    newDiscount = scanner.nextInt();
-    itemRegister.setNewMethod(searchUserInput, newDescription, newPrice, newDiscount);
-    printUserInterface.printSearchItem(searchUserInput);
+    int newDiscount = waitValidDiscount();
+    itemRegister.setNewMethod(itemNumber, newDescription, newPrice, newDiscount);
+    printUserInterface.printSearchItem(itemNumber);
   }
 }

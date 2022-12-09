@@ -49,7 +49,6 @@ public class Item {
     setItemHeight(itemHeight);
     setColourOfItem(colourOfItem);
     setNumberOfItemsInStorage(numberOfItemsInStorage);
-    setColourOfItem(colourOfItem);
     setCategoriesOfItems(categoriesOfItems);
   }
 

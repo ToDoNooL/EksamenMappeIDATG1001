@@ -63,7 +63,7 @@ public class CheckIfValid {
   /**
    * This Method is used to check if the user input is blank or empty, if so return false.
 
-   * @param userInput the input a user gives, a whole number(string).
+   * @param userInput the input a user gives, a whole String(string).
    * @return returns Boolean if userInput is valid.
    */
   public boolean checkIfValidString(String userInput) {
@@ -93,6 +93,10 @@ public class CheckIfValid {
     return userInput >= 0 && userInput <= 4;
   }
 
+  public boolean checkValidIntBetweenZeroAndFour(int userInput) {
+    return userInput >= 1 && userInput <= 4;
+  }
+
   /**
    * This Method is used to check if the user input is between 0 and 2.
 
@@ -103,6 +107,19 @@ public class CheckIfValid {
     return userInput >= 0 && userInput <= 2;
   }
 
+  /**
+   * This Method is used to check if the user input is between 1 and 2.
+
+   * @param userInput the input a user gives, a whole number(int).
+   * @return returns Boolean if userInput is between 1 and 2 int.
+   */
+  public boolean checkIfValidBetweenOneOrThree(int userInput) {
+    return userInput >= 1 && userInput <= 3;
+  }
+
+  public boolean checkIfValidDiscount(int userInput) {
+    return userInput >= 0 && userInput < 100;
+  }
   /**
    * This Method is used to check if the item is null return true or false.
 

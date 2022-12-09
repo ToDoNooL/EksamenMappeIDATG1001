@@ -3,6 +3,8 @@ package utilities;
 import itemstorage.Item;
 import itemstorage.ItemRegister;
 import java.util.Iterator;
+import java.util.Scanner;
+
 
 /**
  * This class is used to print all the messages in the Application.
@@ -13,12 +15,15 @@ import java.util.Iterator;
  */
 public class PrintUserInterface {
   private final ItemRegister itemRegister;
-
+  private final CheckIfValid checkIfValid;
   private static final String PRICE = "PRICE NOK";
   private static final String NUMBER = "ITEM NUMBER";
   private static final String DESCRIPTION = "ITEM DESCRIPTION";
   private static final String BRAND = "ITEM BRAND";
   private static final String AMOUNT = "ITEM AMOUNT";
+  private static final String CATEGORY = "ITEM CATEGORY";
+  private static final String SOUTF = "%-20s  %-20s  %-40s  %-30s  %-20s %n";
+  private final Scanner userReadInput;
 
   /**
    * This method passes the itemRegister so this class can use it.
@@ -27,6 +32,8 @@ public class PrintUserInterface {
    */
   public PrintUserInterface(ItemRegister itemRegister) {
     this.itemRegister = itemRegister;
+    this.checkIfValid = new CheckIfValid();
+    userReadInput = new Scanner(System.in);
   }
 
   /**
@@ -42,7 +49,7 @@ public class PrintUserInterface {
             .append("[4]: Increase Amount Of A Item In Storage \n ")
             .append("[5]: Decrease Amount Of A Item In Storage \n ")
             .append("[6]: Delete A Item  In Storage\n ")
-            .append("[7]: Set Or Delete A Discount On A Item In Storage \n ")
+            .append("[7]: Set A Discount or Change A Item In Storage \n ")
             .append("[8]: If You Need Help \n ")
             .append("[0]: To Exit The Program \n "));
   }
@@ -59,12 +66,8 @@ public class PrintUserInterface {
    * This methodPrints the Help Menu.
    */
   public void printHelp() {
-    System.out.println("\nOptions: ");
-    System.out.println("[1]: How Do I Add A Item");
-    System.out.println("[2]: How Do I Delete A Item");
-    System.out.println("[3]: How Do Mass Add Items");
-    System.out.println("[4]: How Do I Mass Delete Items");
-    System.out.println("[5]: Return Back To Menu");
+    System.out.println("We are currently to busy whit Helseplattformen");
+    System.out.println("Come back later and see if the help site is up.");
   }
 
   /**
@@ -126,7 +129,7 @@ public class PrintUserInterface {
    * This method Prints the Add Item Menu.
    */
   public void printAddItemMenu() {
-    System.out.println("\nWelcome to Where we add a item");
+    System.out.println("\nDo You Wanna Add A New Item?: ");
     System.out.println("[1] Add a new Item");
     System.out.println("[2] Go Back To Menu");
   }
@@ -349,15 +352,16 @@ public class PrintUserInterface {
    */
   public void printAllItems() {
     Iterator<Item> it = this.itemRegister.getIterator();
-    System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n",
+    System.out.printf(SOUTF,
             PRICE, NUMBER, DESCRIPTION, BRAND, AMOUNT);
     System.out.println("----------------------------------------------------");
     while (it.hasNext()) {
       Item item = it.next();
       // First create the text to display the borrowed status
-      System.out.printf("%-20d  %-20s  %-40s  %-30s  %-20s %n",
-                item.getItemPrice(), item.getItemNumber(), item.getItemDescription(),
-                item.getItemBrandName(), item.getNumberOfItemsInStorage());
+      System.out.printf(SOUTF,
+                item.getItemPrice() + "KR.", item.getItemNumber() + ".",
+                item.getItemDescription() + ".", item.getItemBrandName() + ".",
+                item.getNumberOfItemsInStorage() + ".");
     }
   }
 
@@ -365,18 +369,57 @@ public class PrintUserInterface {
    * This method Prints all the items in register, With all parameters.
    */
   public void printAllItemsWithAllDetails() {
+    int number = 1;
     Iterator<Item> it = this.itemRegister.getIterator();
-    System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s  %-20s %n",
-            PRICE, NUMBER, DESCRIPTION, BRAND, AMOUNT, "Item "
-            + "Category");
+    System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n  %-20s  %-20s  %-20s  %-20s  %-20s %n",
+            PRICE, NUMBER, DESCRIPTION, BRAND, AMOUNT, CATEGORY, "ITEM LENGHT",
+        "ITEM HEIGHT", "ITEM WEIGHT", "ITEM COLOUR");
     System.out.println("---------------------------------------------------------------------");
     while (it.hasNext()) {
       Item item = it.next();
-      // First create the text to display the borrowed status
-      System.out.printf("%-20d  %-20s  %-40s  %-30s  %-20s  %-20s %n",
-          item.getItemPrice(), item.getItemNumber(), item.getItemDescription(),
-          item.getItemBrandName(), item.getNumberOfItemsInStorage(),
-          item.getCategoriesOfItems());
+      System.out.println("Number " + number);
+      System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n  %-20s  %-20s  %-20s  %-20s %-20s %n",
+          item.getItemPrice() + " KR.", item.getItemNumber() + ".", item.getItemDescription() + ".",
+          item.getItemBrandName() + ".", item.getNumberOfItemsInStorage() + ".",
+          item.getCategoriesOfItems() + ".", item.getItemLenght() + " CM.",
+          item.getItemHeight() + " CM.", item.getItemWeight() + " KG.",
+          item.getColourOfItem() + ".");
+      System.out.println(
+          "-----------------------------------------------------------------------------------");
+      number++;
+    }
+  }
+
+  /**
+   * Prints one category from an userInput.
+   */
+  public void printOneCategory() {
+    int userInput = 0;
+    boolean validUserInput = false;
+    do {
+      if (userReadInput.hasNextInt()) {
+        userInput = userReadInput.nextInt();
+        if (checkIfValid.checkValidIntBetweenZeroAndFour(userInput)) {
+          validUserInput = true;
+        }
+      } else {
+        userReadInput.nextLine();
+        System.out.println("Enter a valid number.");
+      }
+    } while (!validUserInput);
+    Iterator<Item> it = this.itemRegister.getIterator();
+    System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n  %-20s %n",
+        PRICE, NUMBER, DESCRIPTION, BRAND, AMOUNT, CATEGORY);
+    System.out.println(
+        "---------------------------------------------------------------------");
+    while (it.hasNext()) {
+      Item item = it.next();
+      if (item.getCategoriesOfItems().getNumber() == userInput) {
+        System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s  %-20s %n",
+            item.getItemPrice() + " KR.", item.getItemNumber() + ".",
+            item.getItemDescription() + ".", item.getItemBrandName() + ".",
+            item.getNumberOfItemsInStorage() + ".", item.getCategoriesOfItems() + ".");
+      }
     }
   }
 
@@ -475,6 +518,17 @@ public class PrintUserInterface {
   }
 
   /**
+   * This method prints the menu for choosing menu for category.
+   */
+  public void printEnterNumberForCategory() {
+    System.out.println("Enter The number to print the category");
+    System.out.println("[1] Floor Laminates");
+    System.out.println("[2] Windows");
+    System.out.println("[3] Doors");
+    System.out.println("[4] Lumber");
+  }
+
+  /**
    * The method prints one item from ItemNumber.
 
    * @param searchUserInput Takes the itemNumber to search for an Item in register.
@@ -486,16 +540,49 @@ public class PrintUserInterface {
       Item item = it.next();
       if (item.getItemNumber().equalsIgnoreCase(searchUserInput)) {
         if (printHeader) {
-          System.out.printf("%-20s  %-20s  %-40s  %-30s  %-20s %n",
+          System.out.printf(SOUTF,
               PRICE, NUMBER, DESCRIPTION, BRAND, AMOUNT);
           System.out.println("---------------------------------------------------------");
           printHeader = false;
         }
         // First create the text to display the borrowed status
-        System.out.printf("%-20d  %-20s  %-40s  %-30s  %-20s %n",
-                    item.getItemPrice(), item.getItemNumber(), item.getItemDescription(),
-                    item.getItemBrandName(), item.getNumberOfItemsInStorage());
+        System.out.printf(SOUTF,
+                    item.getItemPrice() + " KR.", item.getItemNumber() + ".",
+                    item.getItemDescription() + ".", item.getItemBrandName() + ".",
+                    item.getNumberOfItemsInStorage() + ".");
       }
+    }
+  }
+
+  /**
+   * This method prints the menu for if you want to print all items in register or only one
+   * category.
+   */
+  public void whatToPrint() {
+    System.out.println("[1] Print all Items In Register.");
+    System.out.println("[2] Print only One Category in Register.");
+    System.out.println("[3] Print all Items in Register With All Info.");
+    int userInput = 0;
+    boolean validUserInput = false;
+    do {
+      if (userReadInput.hasNextInt()) {
+        userInput = userReadInput.nextInt();
+        if (checkIfValid.checkIfValidBetweenOneOrThree(userInput)) {
+          validUserInput = true;
+        } else {
+          userReadInput.nextLine();
+          System.out.println("Enter a Valid number");
+        }
+      }
+    } while (!validUserInput);
+    switch (userInput) {
+      case 1 -> printAllItems();
+      case 2 -> {
+        printEnterNumberForCategory();
+        printOneCategory();
+      }
+      case 3 -> printAllItemsWithAllDetails();
+      default -> whatToPrint();
     }
   }
 }
