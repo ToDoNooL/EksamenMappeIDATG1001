@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection">
+    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="Changes in files">
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/Bilder av commit3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/Bilder av commits.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/Commit's to the main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/bilder av commit 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/bilder av commit 7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/bilder av commit2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/bilder av commit4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/bilder fra commit5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/virtual paradigm3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaDocforMappe-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raport/~$atg1001-studentrapport-mappe.dotx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemstorage/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/CheckIfValid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseAddItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseAddItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseEditAmountOfItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseEditAmountOfItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +88,7 @@
       <workItem from="1670434496450" duration="25936000" />
       <workItem from="1670509272839" duration="1253000" />
       <workItem from="1670510561914" duration="171000" />
-      <workItem from="1670510752107" duration="25248000" />
+      <workItem from="1670510752107" duration="39860000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1669918825822</created>
@@ -157,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670505199765</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="eight commit,CheckStyle and Sonarlink has been checked, bugs has been fixed, added some more print function, prob added new bugs.">
+      <created>1670550658493</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670550658493</updated>
+    </task>
+    <task id="LOCAL-00012" summary="push for uF">
+      <created>1670550682252</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670550682252</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +199,9 @@
     <MESSAGE value="fifth commit, Edum has been added, CheckStyle has been checked on the itemStorage collection" />
     <MESSAGE value="sixth commit,CheckStyle and Sonarlink has been checked on the Utilites collection" />
     <MESSAGE value="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="seventh commit,CheckStyle and Sonarlink has been checked on the warehousemanagerui collection" />
+    <MESSAGE value="eight commit,CheckStyle and Sonarlink has been checked, bugs has been fixed, added some more print function, prob added new bugs." />
+    <MESSAGE value="push for uF" />
+    <MESSAGE value="Changes in files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in files" />
   </component>
 </project>

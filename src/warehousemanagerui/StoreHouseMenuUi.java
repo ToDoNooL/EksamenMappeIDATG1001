@@ -78,10 +78,7 @@ public class StoreHouseMenuUi {
           storeHouseMainMenu();
         }
       }
-      case 1 -> {
-        printUserInterface.printNumberOfItemsInStorage();
-        printUserInterface.whatToPrint();
-      }
+      case 1 -> printUserInterface.whatToPrint();
       case 2 -> {
         StoreHouseSearchForItem storeHouseSearchForItem =
             new StoreHouseSearchForItem(itemRegister);
