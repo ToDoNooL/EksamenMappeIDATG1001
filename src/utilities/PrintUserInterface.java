@@ -569,10 +569,10 @@ public class PrintUserInterface {
         userInput = userReadInput.nextInt();
         if (checkIfValid.checkIfValidBetweenOneOrThree(userInput)) {
           validUserInput = true;
-        } else {
-          userReadInput.nextLine();
-          System.out.println("Enter a Valid number");
         }
+      } else {
+        userReadInput.nextLine();
+        System.out.println("Enter a Valid number");
       }
     } while (!validUserInput);
     switch (userInput) {

@@ -43,10 +43,10 @@ public class StoreHouseManagerChangeItem {
         userInput = userInputForStoreHouse.nextInt();
         if (checkIfValid.checkValidIntIntMenu(userInput)) {
           validUserInput = true;
-        } else {
-          userInputForStoreHouse.next();
-          printUserInterface.printValidNumberFrom0to8();
         }
+      } else {
+        userInputForStoreHouse.next();
+        printUserInterface.printValidNumberFrom0to8();
       }
     } while (!validUserInput);
     switch (userInput) {

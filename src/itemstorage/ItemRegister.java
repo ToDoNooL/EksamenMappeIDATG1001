@@ -172,19 +172,25 @@ public class ItemRegister {
    * Search for all items by a given author, and set's the new Price on the item.
 
    * @param itemNumber The item number of the item to Search for.
-   * @param discount Is the discount for the item, formula is (100-n)/100*(old price) to set
+   * @param discountInput Is the discount for the item, formula is (100-n)/100*(old price) to set
    *                 new price.
    * @return An iterator to a collection of the items found.
    */
-  public Iterator<Item> setDiscountOnItem(String itemNumber, int discount) {
+  public Iterator<Item> setDiscountOnItem(String itemNumber, double discountInput) {
     HashSet<Item> foundItem = new HashSet<>();
-
     // Use for-each since we need to iterate through the
     // whole collection
     for (Item item : this.itemList.values()) {
       if (item.getItemNumber().equalsIgnoreCase(itemNumber)) {
-        item.setItemPrice(item.getItemPrice() * (100 - discount) / 100);
-        foundItem.add(item);
+        if (discountInput != 0) {
+          double discount = item.getItemPrice()  * (1 - (discountInput) / 100);
+          int value  = (int) discount;
+          item.setItemPrice(value);
+          foundItem.add(item);
+        } else {
+          item.setItemPrice(item.getItemPrice());
+          foundItem.add(item);
+        }
       }
     }
     return foundItem.iterator();
@@ -233,7 +239,7 @@ public class ItemRegister {
         foundItem.add(item);
         item.setItemPrice(newPrice);
         foundItem.add(item);
-        item.setItemPrice(item.getItemPrice() * setDiscount);
+        item.setItemPrice(setDiscount);
         foundItem.add(item);
       }
     }

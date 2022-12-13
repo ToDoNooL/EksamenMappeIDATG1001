@@ -119,13 +119,13 @@ public class StoreHouseMenuUi {
    * This method fills the register with items.
    */
   private void fillItemRegisterWithCars() {
-    String brand = "NorwegianFlorAS";
+    String brand = "Hunton";
     String colour = "Brown";
-    String brand1 = "BoxMan";
+    String brand1 = "Pergo";
 
     this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Yellow")
             .setItemDescription("Big Box").setItemHeight(75).setItemLenght(100)
-            .setItemPrice(100).setItemBrandName("WoodCooper").setItemNumber("ABC")
+            .setItemPrice(100).setItemBrandName("Egger").setItemNumber("ABC")
             .setNumberOfItemsInStorage(10).setItemWeight(60.5f).setCategoriesOfItems(2)
             .getItem());
 
@@ -149,7 +149,7 @@ public class StoreHouseMenuUi {
 
     this.itemRegister.addItem(new ItemBuilder().setColourOfItem("Blue")
              .setItemDescription("Window For Building").setItemHeight(150).setItemLenght(200)
-             .setItemPrice(333).setItemBrandName("WindowMan").setItemNumber("C3321")
+             .setItemPrice(333).setItemBrandName("Egger").setItemNumber("C3321")
              .setNumberOfItemsInStorage(54).setItemWeight(66.6f).setCategoriesOfItems(4)
              .getItem());
 

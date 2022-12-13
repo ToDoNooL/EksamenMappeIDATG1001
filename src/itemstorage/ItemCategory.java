@@ -34,7 +34,7 @@ public enum ItemCategory {
    * @param label the lable of the enum as a String.
    * @param number the number to the enum as an int.
    */
-   ItemCategory(String label, Integer number) {
+  ItemCategory(String label, Integer number) {
     this.label = label;
     this.number = number;
   }

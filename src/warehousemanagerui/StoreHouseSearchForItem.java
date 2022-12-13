@@ -40,7 +40,7 @@ public class StoreHouseSearchForItem {
         }
       } else {
         userInput.nextLine();
-        userInput.next();
+        printUserInterface.printValidItemNumber();
       }
     } while (!userInputValid);
     itemRegister.foundItemsByItemNumber(searchInput);
