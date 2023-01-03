@@ -6,3 +6,37 @@ P
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+`
+0src/warehousemanagerui/StoreHouseDeleteItem.java,9\7\97045eec7723727924c9f221a48046d21d0fac4c
+Z
+*src/warehousemanagerui/StoreHouseExit.java,d\0\d0148707b71d140d099588ddb9d139d586d816d9
+]
+-src/warehousemanagerui/StoreHouseAddItem.java,2\e\2ee93062470ede2a04288e6d6aeb5e4ad06b1c71
+f
+6src/warehousemanagerui/StoreHouseEditAmountOfItem.java,0\9\092ec12f3f918f25d59630ceeebe6cb0ba947bc9
+P
+ src/itemstorage/ItemBuilder.java,1\d\1d5bfeda09a4129e21e6c43ff45f7939cde18ff9
+J
+JavaDocforMappe-index.html,8\c\8cc955084ea45d99df1260a74b6502bf671d5230
+d
+4.idea/artifacts/WarehouseManangerSystemMappe_jar.xml,a\5\a589413576c7dd7e3ea3331ac958baa2098486a2
+\
+,src/warehousemanagerui/StoreHouseMenuUi.java,c\e\cee0a529ea75d75dcaeb08c5a7ee91459e73dd66
+O
+src/utilities/CheckIfValid.java,b\2\b27e707c8c109df45b0d9d193fffd90b04ce0aba
+I
+src/itemstorage/Item.java,c\0\c057ea94eb78ca08adb1ad1363dde27645cc2cbc
+Q
+!src/itemstorage/ItemRegister.java,c\5\c586ec2c941dc7c9df5098fb6f6af48d4719d96c
+g
+7src/warehousemanagerui/StoreHouseManagerChangeItem.java,f\7\f7e7d24622ff1f0694f9d2f75732b426adfb4aed
+a
+1src/warehousemanagerui/SmartHusAsApplication.java,d\4\d4e73064405f8defbe1f757bc3c95ee6793cfa38
+c
+3src/warehousemanagerui/StoreHouseSearchForItem.java,f\3\f34c1ecf2736bff635120341b3b9e24c1f7583ba
+Q
+!src/itemstorage/ItemCategory.java,0\6\06ad15d1d46216079e109749747a45300672275e
+U
+%src/utilities/PrintUserInterface.java,2\c\2ca33985ece46d6050a0173a0cc2813673a4c907
+H
+src/META-INF/MANIFEST.MF,e\4\e4b1fd2293ba1e598e6bec4e0ee3b6b6851eb5a2

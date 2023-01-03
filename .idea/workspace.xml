@@ -6,20 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="Changes in files">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/WarehouseManangerSystemMappe_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/warehousemanagerui/SmartHusAsApplication.java" afterDir="false" />
+    <list default="true" id="8750a768-9998-4c85-936d-e726f9b44721" name="Changes" comment="Final push">
+      <change afterPath="$PROJECT_DIR$/Bilder til raport/LeverEksamenProg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raport/idatg1001-studentrapport-mappe.dotx" beforeDir="false" afterPath="$PROJECT_DIR$/Raport/idatg1001-studentrapport-mappe.dotx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raport/~$atg1001-studentrapport-mappe.dotx" beforeDir="false" afterPath="$PROJECT_DIR$/Raport/~$atg1001-studentrapport-mappe.dotx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/itemstorage/ItemRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/PrintUserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseManagerChangeItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseMenuUi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseSearchForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/warehousemanagerui/StoreHouseSearchForItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raport/~$atg1001-studentrapport-mappe.dotx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IK7tjXebPt2kxmvlULKuuZ3FMK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -50,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -95,7 +89,8 @@
       <workItem from="1670434496450" duration="25936000" />
       <workItem from="1670509272839" duration="1253000" />
       <workItem from="1670510561914" duration="171000" />
-      <workItem from="1670510752107" duration="59454000" />
+      <workItem from="1670510752107" duration="59512000" />
+      <workItem from="1672751897506" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1669918825822</created>
@@ -188,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670804362371</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Final push">
+      <created>1670899827739</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670899827739</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +208,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit, this is the early stage of code that i took from my old code" />
     <MESSAGE value="third commit, need to add foolprof on methods, and lacking ENUM class" />
@@ -216,7 +219,8 @@
     <MESSAGE value="eight commit,CheckStyle and Sonarlink has been checked, bugs has been fixed, added some more print function, prob added new bugs." />
     <MESSAGE value="push for uF" />
     <MESSAGE value="Changes in files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in files" />
+    <MESSAGE value="Final push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
